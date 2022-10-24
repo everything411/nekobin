@@ -12,6 +12,7 @@ WORKDIR /app
 COPY --from=build_base /go/src/github.com/everything411/nekobin/nekobin ./nekobin
 COPY --from=build_base /go/src/github.com/everything411/nekobin/assets ./assets
 COPY --from=build_base /go/src/github.com/everything411/nekobin/config-sample.yaml ./config.yaml
+COPY --from=build_base /go/src/github.com/everything411/nekobin/README.md ./README.md
 
 EXPOSE 5555
 
